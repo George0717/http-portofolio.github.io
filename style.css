@@ -50,7 +50,7 @@ body {
 
 .about {
   /* display: grid; */
-  height: 500px;
+  height: 300px;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -146,24 +146,20 @@ blockquote::after {
   text-align: center;
 }
 
-.myskill .skill:hover {
-  text-align: left;
-  background-image: none;
-  background-size: cover;
-  background-position: center;
-  width: 5000px;
-  position: absolute;
-  transition: 3s;
-  background-color: rgb(39, 38, 38);
-}
-
 .myskill .skill h1,
 p {
   padding: 10px;
 }
+.myskill .skill h1,
+p,
+progress {
+  padding: 10px;
+  margin-left: 5px;
+}
 
-.myskill .skill ul {
+.myskill .skill ul li {
   text-align: left;
+  display: inline;
 }
 
 .myskill .penjelasan {
@@ -322,6 +318,8 @@ button:active span::before {
   text-decoration: none;
   color: black;
   padding-left: 40px;
+  font-family: "Sedgwick Ave", cursive;
+  text-align: center;
 }
 
 .mediasosial a:hover {
@@ -412,6 +410,14 @@ button:active span::before {
   }
 }
 @media screen and (max-width: 576px) {
+  .navbar a {
+    text-decoration: none;
+    width: 100px;
+    color: black;
+    scroll-behavior: smooth;
+    gap: 10px;
+  }
+
   .about {
     line-height: normal;
     height: 800px;
@@ -436,8 +442,22 @@ button:active span::before {
   }
   .myskill .skill {
     width: 100%;
+    text-align: center;
   }
   .myskill .riwayat {
     width: 100%;
+    text-align: center;
+  }
+  .myskill .penjelasan {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mediasosial svg {
+    width: 20px;
+    margin-left: 10px;
+  }
+  .mediasosial a {
+    margin: 0;
   }
 }
